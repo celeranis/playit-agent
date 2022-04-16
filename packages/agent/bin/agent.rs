@@ -54,7 +54,7 @@ async fn main() {
     let args: CliArgs = CliArgs::parse();
     
     if args.use_linux_path_defaults {
-        #[cfg(not(target-family = "unix"))]
+        #[cfg(not(target_family = "unix"))]
         {
             println!("--use-linux-path-defaults is not supported on Windows");
             std::process::exit(1);
